@@ -1,0 +1,59 @@
+﻿@model sinavkonusarakogrenn.Models.Home.ExeamViewModel
+
+@Model.Title
+<br />
+@Model.Description
+
+<input id="postId" type="hidden" value="@Model.Id" />
+
+@for (int i = 0; i < Model.Questions.Count; i++)
+{
+    <div id="question-@Model.Questions[i].Id" data-id="@Model.Questions[i].Id" class="question">
+        <div>
+            Soru : @Model.Questions[i].Description
+        </div>
+        <br />
+        <div id="container-@Model.Questions[i].Id-A">
+            <input type="radio" name="radio-@Model.Questions[i].Id" value="A" /> <label name="radio-@Model.Questions[i].Id">@Model.Questions[i].A</label>
+        </div>
+        <div id="container-@Model.Questions[i].Id-B">
+            <input type="radio" name="radio-@Model.Questions[i].Id" value="B" /> <label name="radio-@Model.Questions[i].Id">@Model.Questions[i].B</label>
+        </div>
+        <div id="container-@Model.Questions[i].Id-C">
+            <input type="radio" name="radio-@Model.Questions[i].Id" value="C" /> <label name="radio-@Model.Questions[i].Id">@Model.Questions[i].C</label>
+        </div>
+        <div id="container-@Model.Questions[i].Id-D">
+            <input type="radio" name="radio-@Model.Questions[i].Id" value="D" /> <label name="radio-@Model.Questions[i].Id">@Model.Questions[i].D</label>
+        </div>
+        <hr />
+    </div>
+}
+
+<input id="finish" type="button" value="Sınavı Tamamla" />
+
+<script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"></script>
+
+<script>
+    $(document).ready(function () {
+        var postId = $("#postId").val();
+
+        $(document).on("click", "#finish", function () {
+            $.get("/ExeamResult/" + postId, function (data, status) {
+                var result = data
+                $('.question').each(function (i, obj) {
+                    var id = $(this).data("id");
+                    var res = result.find(item => item.id === id).answer;
+                    var val = $("#question-" + id + " input[type='radio']:checked").val();
+
+                    if (res == val)
+                        $("#container-" + id + "-" + res).css('background-color', 'green');
+                    else
+                        $("#container-" + id + "-" + res).css('background-color', 'red');
+                });
+            });
+        });
+    });
+</script>
+@Html.ActionLink("Geri Dön", "PostList", "Home", new { @class = "my-class" }, new { @style = "color:#000aaa;" })

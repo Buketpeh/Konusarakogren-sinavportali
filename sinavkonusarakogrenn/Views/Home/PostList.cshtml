@@ -1,0 +1,28 @@
+﻿@model List<sinavkonusarakogrenn.Data.Entites.Post>
+@{
+    ViewData["Title"] = "Sınav Listesi";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>Başlık</th>
+        <td>Tarih</td>
+        <td>SİL</td>
+        <td>Sınava Katıl</td>
+    </tr>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Title</td>
+                <td>@item.CreatedDate</td>
+                <td>@Html.ActionLink("Sil", "Delete", "Home" , new { id = item.Id }, new { @style = "color:#000aaa;" })</td>
+                <td>@Html.ActionLink("Sınava katıl", "Exeam", "Home", new { id = item.Id }, new { @style = "color:#000aaa;" })</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@Html.ActionLink("Sınav Oluştur", "Index", "Home", new { @class = "my-class" },  new { @style = "color:#000aaa;" })
+@*<a></a>*@

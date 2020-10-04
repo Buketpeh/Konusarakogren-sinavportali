@@ -1,0 +1,66 @@
+﻿
+
+
+<form method="post" action="">
+    <select id="post-title"></select>
+    <input id="hidden-post-title" type="hidden" name="Title" />
+    <div id="post-description"></div>
+    <input id="hidden-post-description" type="hidden" name="Description" />
+    <br /><br />
+    @for (int i = 0; i < 4; i++)
+    {
+        <div>
+            <div>Soru  @i+1 <input type="text" name="Questions[@i].Description" /></div>
+            <br />
+            <div>
+                A)<input type="text" name="Questions[@i].A" />
+                B)<input type="text" name="Questions[@i].B" />
+                C)<input type="text" name="Questions[@i].C" />
+                D)<input type="text" name="Questions[@i].D" />
+            </div>
+            <br />
+            <div>
+                <select name="Questions[@i].Answer">
+                    <option>Doğru cevap seç</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                </select>
+            </div>
+        </div>
+        <hr />
+    }
+
+    <input type="submit" />
+</form>
+@Html.ActionLink("Geri Dön", "PostList", "Home", new { @class = "my-class" }, new { @style = "color:#000aaa;" })
+
+<script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"></script>
+
+<script>
+    $(document).ready(function () {
+        var posts = JSON.stringify(@Html.Raw(ViewBag.Posts));
+        $.each(JSON.parse(posts), function (i, item) {
+            console.log(item.Description)
+            $('#post-title').append(new Option(item.Title, i));
+        });
+
+        $("#hidden-post-title").val(JSON.parse(posts)[0].Title);
+
+        $("#post-description").text(JSON.parse(posts)[0].Description);
+        $("#hidden-post-description").val(JSON.parse(posts)[0].Description);
+
+        $('#post-title').change(function () {
+            var val = $(this).val();
+
+            $("#hidden-post-title").val(JSON.parse(posts)[val].Title);
+
+            $("#post-description").text(JSON.parse(posts)[val].Description);
+
+            $("#hidden-post-description").val(JSON.parse(posts)[val].Description);
+        });
+    });
+</script>

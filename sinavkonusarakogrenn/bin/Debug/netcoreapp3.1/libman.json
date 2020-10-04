@@ -1,0 +1,10 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "wow@1.1.2",
+      "destination": "lib/wow/"
+    }
+  ]
+}

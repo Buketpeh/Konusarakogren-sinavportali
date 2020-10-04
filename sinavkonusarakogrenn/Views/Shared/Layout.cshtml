@@ -1,0 +1,191 @@
+﻿<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Environmental</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    @*<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">*@
+    <img src="~/Content/assets/img/favicon.ico" />
+    <!-- CSS here -->
+    @*<link rel="stylesheet" href="assets/css/bootstrap.min.css">*@
+    <link href="~/Content/assets/css/bootstrap.min.css" rel="stylesheet" />
+    @*<link rel="stylesheet" href="assets/css/owl.carousel.min.css">*@
+    <link href="~/Content/assets/css/owl.carousel.min.css" rel="stylesheet" />
+    @*<link rel="stylesheet" href="assets/css/slicknav.css">*@
+    <link href="~/Content/assets/css/slicknav.css" rel="stylesheet" />
+    @*<link rel="stylesheet" href="assets/css/animate.min.css">*@
+    <link href="~/Content/assets/css/animate.min.css" rel="stylesheet" />
+    @*<link rel="stylesheet" href="assets/css/hamburgers.min.css">*@
+    <link href="~/Content/assets/css/hamburgers.min.css" rel="stylesheet" />
+    @*<link rel="stylesheet" href="assets/css/magnific-popup.css">*@
+    <link href="~/Content/assets/css/magnific-popup.css" rel="stylesheet" />
+    @*<link rel="stylesheet" href="assets/css/fontawesome-all.min.css">*@
+    <link href="~/Content/assets/css/fontawesome-all.min.css" rel="stylesheet" />
+    @*<link rel="stylesheet" href="assets/css/themify-icons.css">*@
+    <link href="~/Content/assets/css/themify-icons.css" rel="stylesheet" />
+    @*<link rel="stylesheet" href="assets/css/slick.css">*@
+    <link href="~/Content/assets/css/slick.css" rel="stylesheet" />
+    @*<link rel="stylesheet" href="assets/css/nice-select.css">*@
+    <link href="~/Content/assets/css/nice-select.css" rel="stylesheet" />
+    @*<link rel="stylesheet" href="assets/css/style.css">*@
+    <link href="~/Content/assets/css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!--? Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    @*<img src="assets/img/logo/loder.png" alt="">*@
+                    <img src="~/Content/assets/img/logo/loder.png" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader Start -->
+    <header>
+        <!-- Header Start -->
+        <div class="header-area">
+            <div class="main-header ">
+                <div class="header-bottom  header-sticky">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            <!-- Logo -->
+                            <div class="col-xl-2 col-lg-2">
+                                <div class="logo">
+                                    <a href="index.html">
+                                      <h1>Sınav Portalı</h1>  @*<img src="~/Content/assets/img/logo/logo.png" />*@@*<img src="assets/img/logo/logo.png" alt="">*@
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-xl-10 col-lg-10">
+                                <div class="menu-wrapper  d-flex align-items-center justify-content-end">
+                                    <!-- Main-menu -->
+                                    <div class="main-menu d-none d-lg-block">
+                                        <nav>
+                                            <ul id="navigation">
+                                                @*<li><a href="index.html">Sınav Hazırla</a></li>
+                                                <li><a href="about.html">Sınav Listesi</a></li>*@
+                                                @*<li><a href="what-do.html">What we Do</a></li>
+                                                <li><a href="projects.html">Projects</a></li>
+                                                <li>
+                                                    <a href="blog.html">Blog</a>
+                                                    <ul class="submenu">
+                                                        <li><a href="blog.html">Blog</a></li>
+                                                        <li><a href="blog_details.html">Blog Details</a></li>
+                                                        <li><a href="elements.html">Element</a></li>
+                                                    </ul>
+                                                </li>*@
+                                                @*<li><a href="/Account/logout">Çıkış Yap</a></li>*@
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                    <!-- Header-btn -->
+                                    <div class="header-right-btn d-none d-lg-block ml-20">
+                                        <a href="/Account/logout" class="btn header-btn">Çıkış Yap</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Mobile Menu -->
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-lg-none"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+    </header>
+    <main>
+        <!--? Hero Start -->
+        @RenderBody()
+        
+        <!-- Hero End -->
+        <!--? Blog Area Start -->
+        <!-- Blog Area End -->
+    </main>
+    <footer>
+        <div class="footer-wrapper">
+            <!-- Footer Start-->
+            <!-- footer-bottom area -->
+            <!-- Footer End-->
+        </div>
+    </footer>
+    <!-- Scroll Up -->
+    @*<div id="back-top">
+        <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+    </div>*@
+
+    <!-- JS here -->
+
+    @*<script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>*@
+    <script src="~/Content/assets/js/vendor/modernizr-3.5.0.min.js"></script>
+    <!-- Jquery, Popper, Bootstrap -->
+    @*<script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>*@
+    <script src="~/Content/assets/js/vendor/jquery-1.12.4.min.js"></script>
+    @*<script src="./assets/js/popper.min.js"></script>*@
+    <script src="~/Content/assets/js/popper.min.js"></script>
+    @*<script src="./assets/js/bootstrap.min.js"></script>*@
+    <script src="~/Content/assets/js/bootstrap.min.js"></script>
+    <!-- Jquery Mobile Menu -->
+    @*<script src="./assets/js/jquery.slicknav.min.js"></script>*@
+    <script src="~/Content/assets/js/jquery.slicknav.min.js"></script>
+
+    <!-- Jquery Slick , Owl-Carousel Plugins -->
+    @*<script src="./assets/js/owl.carousel.min.js"></script>*@
+    <script src="~/Content/assets/js/owl.carousel.min.js"></script>
+    @*<script src="./assets/js/slick.min.js"></script>*@
+    <script src="~/Content/assets/js/slick.min.js"></script>
+    <!-- One Page, Animated-HeadLin -->
+    @*<script src="./assets/js/wow.min.js"></script>*@
+    <script src="~/Content/assets/js/wow.min.js"></script>
+    @*<script src="./assets/js/animated.headline.js"></script>*@
+    <script src="~/Content/assets/js/animated.headline.js"></script>
+    @*<script src="./assets/js/jquery.magnific-popup.js"></script>*@
+    <script src="~/Content/assets/js/jquery.magnific-popup.js"></script>
+
+    <!-- Date Picker -->
+    @*<script src="./assets/js/gijgo.min.js"></script>*@
+    <script src="~/Content/assets/js/gijgo.min.js"></script>
+    <!-- Nice-select, sticky -->
+    @*<script src="./assets/js/jquery.nice-select.min.js"></script>*@
+    <script src="~/Content/assets/js/jquery.nice-select.min.js"></script>
+    @*<script src="./assets/js/jquery.sticky.js"></script>*@
+    <script src="~/Content/assets/js/jquery.sticky.js"></script>
+
+    <!-- counter , waypoint,Hover Direction -->
+    @*<script src="./assets/js/jquery.counterup.min.js"></script>*@
+    <script src="~/Content/assets/js/jquery.counterup.min.js"></script>
+    @*<script src="./assets/js/waypoints.min.js"></script>*@
+    <script src="~/Content/assets/js/waypoints.min.js"></script>
+    @*<script src="./assets/js/jquery.countdown.min.js"></script>*@
+    <script src="~/Content/assets/js/jquery.countdown.min.js"></script>
+    @*<script src="./assets/js/hover-direction-snake.min.js"></script>*@
+    <script src="~/Content/assets/js/hover-direction-snake.min.js"></script>
+
+    <!-- contact js -->
+    @*<script src="./assets/js/contact.js"></script>*@
+    <script src="~/Content/assets/js/contact.js"></script>
+    @*<script src="./assets/js/jquery.form.js"></script>*@
+    <script src="~/Content/assets/js/jquery.form.js"></script>
+    @*<script src="./assets/js/jquery.validate.min.js"></script>*@
+    <script src="~/Content/assets/js/jquery.validate.min.js"></script>
+    @*<script src="./assets/js/mail-script.js"></script>*@
+    <script src="~/Content/assets/js/mail-script.js"></script>
+    @*<script src="./assets/js/jquery.ajaxchimp.min.js"></script>*@
+    <script src="~/Content/assets/js/jquery.ajaxchimp.min.js"></script>
+
+    <!-- Jquery Plugins, main Jquery -->
+    @*<script src="./assets/js/plugins.js"></script>*@
+    <script src="~/Content/assets/js/plugins.js"></script>
+    @*<script src="./assets/js/main.js"></script>*@
+    <script src="~/Content/assets/js/main.js"></script>
+
+</body>
+</html>
